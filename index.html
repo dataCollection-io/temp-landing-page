@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StackData.io - Unlock Insights with Data</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: rgba(18, 18, 18, 0.8);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #9B5DE5;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #9B5DE5;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(45deg, #121212, #1a1a1a);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #9B5DE5;
+      color: #ffffff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(155, 93, 229, 0.4);
+    }
+
+    .blob {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(155, 93, 229, 0.1) 0%, rgba(155, 93, 229, 0) 70%);
+      border-radius: 50%;
+      filter: blur(40px);
+      z-index: 1;
+    }
+
+    .features {
+      padding: 100px 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .feature-item {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #9B5DE5;
+    }
+
+    .feature-title {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .feature-description {
+      font-size: 16px;
+      color: #cccccc;
+      flex-grow: 1;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">StackData.io</div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="blob"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Unlock the Power of Data</h1>
+          <p class="tagline">Discover business, geographical, and strategic insights with StackData.io</p>
+          <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <h3 class="feature-title">Business Intelligence</h3>
+            <p class="feature-description">Transform raw data into actionable insights for smarter business decisions.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🌍</div>
+            <h3 class="feature-title">Geospatial Analysis</h3>
+            <p class="feature-description">Uncover geographical patterns and trends to optimize your strategies.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🔍</div>
+            <h3 class="feature-title">Predictive Analytics</h3>
+            <p class="feature-description">Forecast future trends and stay ahead of the competition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <p>&copy; 2024 StackData.io. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.from('.hero-content > *', {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.3
+      });
+
+      gsap.from('.feature-item', {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '.features',
+          start: 'top 80%'
+        }
+      });
+
+      // Animate blob
+      gsap.to('.blob', {
+        x: '30%',
+        y: '20%',
+        duration: 10,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      });
+    });
+  </script>
+</body>
+
+</html>

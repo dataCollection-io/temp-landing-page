@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StackData.io - Unlock Insights with Data</title>
+  <title>StackData.io - Unlocking World Insights with AI-Powered Data</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <style>
     body,
@@ -107,7 +107,8 @@
       z-index: 1;
     }
 
-    .features {
+    .features,
+    .ai-llm {
       padding: 100px 0;
     }
 
@@ -149,6 +150,26 @@
       flex-grow: 1;
     }
 
+    .ai-llm-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ai-llm-text {
+      flex-basis: 60%;
+    }
+
+    .ai-llm-image {
+      flex-basis: 35%;
+      text-align: center;
+    }
+
+    .ai-llm-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
     footer {
       background-color: #1a1a1a;
       text-align: center;
@@ -164,6 +185,7 @@
         <div class="logo">StackData.io</div>
         <div class="nav-links">
           <a href="#features">Features</a>
+          <a href="#ai-llm">AI & LLM</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -175,9 +197,10 @@
       <div class="blob"></div>
       <div class="container">
         <div class="hero-content">
-          <h1>Unlock the Power of Data</h1>
-          <p class="tagline">Discover business, geographical, and strategic insights with StackData.io</p>
-          <a href="#contact" class="cta-button">Get Started</a>
+          <h1>Unlock the Power of AI-Driven Data</h1>
+          <p class="tagline">Harness the potential of AI and LLMs to gain unprecedented insights into business,
+            geography, and global trends</p>
+          <a href="#contact" class="cta-button">Start Your Data Journey</a>
         </div>
       </div>
     </section>
@@ -187,19 +210,45 @@
         <div class="feature-grid">
           <div class="feature-item">
             <div class="feature-icon">📊</div>
-            <h3 class="feature-title">Business Intelligence</h3>
-            <p class="feature-description">Transform raw data into actionable insights for smarter business decisions.
-            </p>
+            <h3 class="feature-title">AI-Powered Business Intelligence</h3>
+            <p class="feature-description">Leverage advanced AI algorithms to transform raw data into actionable
+              insights, driving smarter business decisions and strategy formulation.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">🌍</div>
-            <h3 class="feature-title">Geospatial Analysis</h3>
-            <p class="feature-description">Uncover geographical patterns and trends to optimize your strategies.</p>
+            <h3 class="feature-title">Geospatial Analysis & Prediction</h3>
+            <p class="feature-description">Utilize AI to uncover complex geographical patterns and predict future
+              trends, optimizing location-based strategies and resource allocation.</p>
           </div>
           <div class="feature-item">
             <div class="feature-icon">🔍</div>
-            <h3 class="feature-title">Predictive Analytics</h3>
-            <p class="feature-description">Forecast future trends and stay ahead of the competition.</p>
+            <h3 class="feature-title">LLM-Enhanced Predictive Analytics</h3>
+            <p class="feature-description">Harness the power of Large Language Models to analyze vast datasets, forecast
+              future trends, and stay ahead of the competition with unparalleled accuracy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-llm" class="ai-llm">
+      <div class="container">
+        <h2>Revolutionizing Data Analysis with AI and LLMs</h2>
+        <div class="ai-llm-content">
+          <div class="ai-llm-text">
+            <p>At StackData.io, we're at the forefront of integrating cutting-edge AI and Large Language Models (LLMs)
+              into data analysis. Our innovative approach allows us to:</p>
+            <ul>
+              <li>Process and understand vast amounts of unstructured data</li>
+              <li>Generate human-like insights and reports from complex datasets</li>
+              <li>Identify subtle patterns and correlations that traditional methods might miss</li>
+              <li>Provide contextual understanding of data, considering global trends and events</li>
+              <li>Offer predictive modeling with unprecedented accuracy and depth</li>
+            </ul>
+            <p>By combining the power of AI with our extensive data resources, we're not just analyzing data – we're
+              unlocking a deeper understanding of the world around us.</p>
+          </div>
+          <div class="ai-llm-image">
+            <img src="/api/placeholder/400/300" alt="AI and LLM Data Analysis Visualization">
           </div>
         </div>
       </div>
@@ -208,7 +257,7 @@
 
   <footer id="contact">
     <div class="container">
-      <p>&copy; 2024 StackData.io. All rights reserved.</p>
+      <p>&copy; 2024 StackData.io. Empowering decisions with AI-driven insights. All rights reserved.</p>
     </div>
   </footer>
 
@@ -228,6 +277,17 @@
         stagger: 0.2,
         scrollTrigger: {
           trigger: '.features',
+          start: 'top 80%'
+        }
+      });
+
+      gsap.from('.ai-llm-content > *', {
+        opacity: 0,
+        x: -50,
+        duration: 1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.ai-llm',
           start: 'top 80%'
         }
       });

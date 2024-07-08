@@ -151,23 +151,8 @@
     }
 
     .ai-llm-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .ai-llm-text {
-      flex-basis: 60%;
-    }
-
-    .ai-llm-image {
-      flex-basis: 35%;
-      text-align: center;
-    }
-
-    .ai-llm-image img {
-      max-width: 100%;
-      border-radius: 10px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     footer {
@@ -234,22 +219,17 @@
       <div class="container">
         <h2>Revolutionizing Data Analysis with AI and LLMs</h2>
         <div class="ai-llm-content">
-          <div class="ai-llm-text">
-            <p>At StackData.io, we're at the forefront of integrating cutting-edge AI and Large Language Models (LLMs)
-              into data analysis. Our innovative approach allows us to:</p>
-            <ul>
-              <li>Process and understand vast amounts of unstructured data</li>
-              <li>Generate human-like insights and reports from complex datasets</li>
-              <li>Identify subtle patterns and correlations that traditional methods might miss</li>
-              <li>Provide contextual understanding of data, considering global trends and events</li>
-              <li>Offer predictive modeling with unprecedented accuracy and depth</li>
-            </ul>
-            <p>By combining the power of AI with our extensive data resources, we're not just analyzing data – we're
-              unlocking a deeper understanding of the world around us.</p>
-          </div>
-          <div class="ai-llm-image">
-            <img src="/api/placeholder/400/300" alt="AI and LLM Data Analysis Visualization">
-          </div>
+          <p>At StackData.io, we're at the forefront of integrating cutting-edge AI and Large Language Models (LLMs)
+            into data analysis. Our innovative approach allows us to:</p>
+          <ul>
+            <li>Process and understand vast amounts of unstructured data</li>
+            <li>Generate human-like insights and reports from complex datasets</li>
+            <li>Identify subtle patterns and correlations that traditional methods might miss</li>
+            <li>Provide contextual understanding of data, considering global trends and events</li>
+            <li>Offer predictive modeling with unprecedented accuracy and depth</li>
+          </ul>
+          <p>By combining the power of AI with our extensive data resources, we're not just analyzing data – we're
+            unlocking a deeper understanding of the world around us.</p>
         </div>
       </div>
     </section>
@@ -258,6 +238,7 @@
   <footer id="contact">
     <div class="container">
       <p>&copy; 2024 StackData.io. Empowering decisions with AI-driven insights. All rights reserved.</p>
+      <p>Contact us: <a href="mailto:contact@stackdata.io" style="color: #9B5DE5;">contact@stackdata.io</a></p>
     </div>
   </footer>
 
@@ -283,7 +264,7 @@
 
       gsap.from('.ai-llm-content > *', {
         opacity: 0,
-        x: -50,
+        y: 50,
         duration: 1,
         stagger: 0.3,
         scrollTrigger: {
